@@ -1,106 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/purple"
     android:layout_height="match_parent"
+    android:background="@color/purple"
     android:layoutDirection="rtl"
+    android:orientation="vertical"
     tools:context=".Preferences">
 
     <LinearLayout
-        android:paddingBottom="10dp"
-        android:id="@+id/headerView"
-        android:gravity="center_horizontal"
-        android:background="@color/purple"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:textColor="@android:color/white"
-            android:text="Personal Ad Info - Preferences"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/headerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Personal Ad Info - Preferences"
+                android:textColor="@android:color/white"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="560dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="40dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="Choose where to get them"
+                    android:textColor="@color/purple"
+                    android:textSize="26sp" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Email"
+                    android:textColor="@color/purple"
+                    android:textSize="24sp" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="SMS"
+                    android:textColor="@color/purple"
+                    android:textSize="24sp" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Facebook"
+                    android:textColor="@color/purple"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="560dp"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Choose when to get them"
+                    android:textColor="@color/purple"
+                    android:textSize="26sp" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Daily"
+                    android:textColor="@color/purple"
+                    android:textSize="26sp" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Weekly"
+                    android:textColor="@color/purple"
+                    android:textSize="26sp" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Monthly"
+                    android:textColor="@color/purple"
+                    android:textSize="26sp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
     </LinearLayout>
 
-    <TextView
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:textColor="@android:color/white"
-        android:text="Choose Were To Get Them"
-        android:textSize="13sp"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
-    <android.support.v7.widget.SwitchCompat
-        android:layout_marginTop="5dp"
-        android:textColor="@android:color/white"
-        android:text="Email"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="120dp"
+    <com.subsub.library.BeautyButton
+        android:foreground="?selectableItemBackground"
+        android:id="@+id/finish"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:elevation="10dp"
         android:gravity="center"
-        android:layout_height="wrap_content" />
-
-    <android.support.v7.widget.SwitchCompat
-        android:layout_marginTop="5dp"
-        android:textColor="@android:color/white"
-        android:text="SMS"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="120dp"
-        android:gravity="center"
-        android:layout_height="wrap_content" />
-
-    <android.support.v7.widget.SwitchCompat
-        android:layout_marginTop="5dp"
-        android:textColor="@android:color/white"
-        android:text="Facebook"
-        android:gravity="center"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content" />
-
-
-    <TextView
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:textColor="@android:color/white"
-        android:text="Choose When To Get Them"
-        android:textSize="13sp"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <android.support.v7.widget.SwitchCompat
-        android:layout_marginTop="5dp"
-        android:textColor="@android:color/white"
-        android:text="Daily"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="120dp"
-        android:gravity="center"
-        android:layout_height="wrap_content" />
-
-    <android.support.v7.widget.SwitchCompat
-        android:layout_marginTop="5dp"
-        android:textColor="@android:color/white"
-        android:text="Weekly"
-        android:gravity="center"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content" />
-
-    <android.support.v7.widget.SwitchCompat
-        android:gravity="center"
-        android:layout_marginTop="5dp"
-        android:textColor="@android:color/white"
-        android:text="Monthly"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="Finish"
+        android:background="@drawable/blue_button"
+        android:textColor="@color/purple"
+        app:shadowColor="@color/colorPrimary"
+        app:shadowPercentHeight="0.7"
+        app:shadowPercentWidth="0.6"
+        app:shadowRadius="30dp"
+        android:textSize="20sp"
+        app:shadowYOffset="10" />
+</RelativeLayout>

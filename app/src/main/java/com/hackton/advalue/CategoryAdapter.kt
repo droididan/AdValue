@@ -1,13 +1,11 @@
 package com.hackton.advalue
 
 import android.support.v7.widget.RecyclerView
-import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
 import kotlinx.android.synthetic.main.category_item.view.*
 import kotlin.properties.Delegates
 
-class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.CategoryHolder>() {
+class CategoryAdapter(val amount: (Int) -> Unit) : RecyclerView.Adapter<CategoryAdapter.CategoryHolder>() {
 
     var categories: List<CategoryModel> by Delegates.observable(arrayListOf()) { _, _, _ ->
         notifyDataSetChanged()
@@ -21,23 +19,33 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.CategoryHolder>() {
     override fun getItemCount(): Int = categories.size
 
     override fun onBindViewHolder(viewHolder: CategoryAdapter.CategoryHolder, position: Int) {
-        viewHolder.bind(categories[position])
+        viewHolder.bind(categories[position], position)
     }
 
     inner class CategoryHolder(parent: ViewGroup) : RecyclerView.ViewHolder(parent.inflate(R.layout.category_item)) {
-        fun bind(model: CategoryModel) = with(itemView) {
+        fun bind(model: CategoryModel, position: Int) = with(itemView) {
             title.text = model.title
             image.load(model.image!!)
             when (model.selected) {
-                true -> this.animate()
-                        .setDuration(200)
-                        .alpha(1f)
-                        .start()
-                false -> this.animate()
-                        .setDuration(200)
-                        .alpha(.7f)
-                        .start()
+                true -> {
+                    if (container.alpha != 1f) {
+                        container.animate()
+                                .setDuration(200)
+                                .alpha(1f)
+                                .start()
+                    }
+                }
+                false -> {
+                    if (container.alpha != .4f) {
+                        container.animate()
+                                .setDuration(200)
+                                .alpha(.2f)
+                                .start()
+                    }
+                }
+
             }
+
             itemView.setOnClickListener {
 
                 if (model.selected) {
@@ -47,7 +55,10 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.CategoryHolder>() {
                 }
 
                 model.selected = !model.selected
-                notifyDataSetChanged()
+                notifyItemChanged(position)
+
+                amount.invoke(selectedList.size)
+
             }
 
         }

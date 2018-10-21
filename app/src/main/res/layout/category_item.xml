@@ -8,7 +8,8 @@
     app:cardCornerRadius="15dp">
 
     <RelativeLayout
-        android:alpha=".7"
+        android:id="@+id/container"
+        android:alpha=".4"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
