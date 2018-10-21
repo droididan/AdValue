@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/purple"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".Preferences">
+
+    <LinearLayout
+        android:paddingBottom="10dp"
+        android:id="@+id/headerView"
+        android:gravity="center_horizontal"
+        android:background="@color/purple"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:text="Personal Ad Info - Preferences"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:textColor="@android:color/white"
+        android:text="Choose Were To Get Them"
+        android:textSize="13sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:text="Email"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="120dp"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:text="SMS"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="120dp"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:text="Facebook"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:textColor="@android:color/white"
+        android:text="Choose When To Get Them"
+        android:textSize="13sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:text="Daily"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="120dp"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:text="Weekly"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:text="Monthly"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

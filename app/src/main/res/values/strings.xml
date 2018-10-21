@@ -2,7 +2,7 @@
     <string name="app_name">AdValue</string>
     <string name="categories_title">Choose your personal interests and Ads info below and we’ll send you our DIRECTVNOW special offers, purchase links, coupons directly to you</string>
 
-    <string name="prefs_title">Personal Ad Info</string>
+    <string name="prefs_title">Personal Ad Info - Categories</string>
     <string name="prefs_email">Email</string>
     <string name="prefs_sms">SMS</string>
     <string name="prefs_facebook">Facebook</string>

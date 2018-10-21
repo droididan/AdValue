@@ -29,8 +29,14 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.CategoryHolder>() {
             title.text = model.title
             image.load(model.image!!)
             when (model.selected) {
-                true -> selected.visibility = View.VISIBLE
-                false -> selected.visibility = View.GONE
+                true -> this.animate()
+                        .setDuration(200)
+                        .alpha(1f)
+                        .start()
+                false -> this.animate()
+                        .setDuration(200)
+                        .alpha(.7f)
+                        .start()
             }
             itemView.setOnClickListener {
 
